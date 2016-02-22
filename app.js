@@ -8,7 +8,7 @@ var fs = require('fs');
 var x;
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var name;
 var app = express();
 
 // view engine setup
@@ -16,7 +16,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 // uncomment after placing your favicon in /public
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,13 +28,13 @@ app.use('/users', users);
 
 
 app.post('/', function (req, res) {
-    
+
     fs.appendFile("test.csv", req.body.fname+", "+req.body.lname+", "+req.body.phn+", "+req.body.email+", "+req.body.msg+"\n", function(err) {
         if(err) {
             return console.log(err);
         }
 
-        console.log("The file was saved in file!");
+        console.log("The file was saved!");
         res.end("data saved");
     });
 });

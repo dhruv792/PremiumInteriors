@@ -4363,13 +4363,14 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-toggle .icon-bar + .icon-bar {
   margin-top: 4px;
 }
-@media (min-width: 768px) {
+@media (min-width: 460px) {
   .navbar-toggle {
     display: none;
   }
 }
 .navbar-nav {
   margin: 7.5px -15px;
+  display: inline;
 }
 .navbar-nav > li > a {
   padding-top: 10px;
@@ -6448,19 +6449,23 @@ button.close {
   display: inline-block;
   width: 10px;
   height: 10px;
-  margin: 1px;
+  margin: 8px;
   text-indent: -999px;
   cursor: pointer;
-  background-color: #000 \9;
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #fff;
+  background-color: white;
+  border: 2px solid #008080;
   border-radius: 10px;
 }
 .carousel-indicators .active {
+  display: inline-block;
   width: 12px;
   height: 12px;
-  margin: 0;
-  background-color: #fff;
+  margin: 8px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: black;
+  border: 2px solid #008080;
+  border-radius: 10px;
 }
 .carousel-caption {
   position: absolute;

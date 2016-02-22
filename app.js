@@ -28,13 +28,13 @@ app.use('/users', users);
 
 
 app.post('/', function (req, res) {
-
+    
     fs.appendFile("test.csv", req.body.fname+", "+req.body.lname+", "+req.body.phn+", "+req.body.email+", "+req.body.msg+"\n", function(err) {
         if(err) {
             return console.log(err);
         }
 
-        console.log("The file was saved!");
+        console.log("The file was saved in file!");
         res.end("data saved");
     });
 });
